@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Boxes</title>
+  <style>
+    body {
+      background: linear-gradient(to right, purple, orange);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding-top: 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .box {
+      width: 130px;
+      height: 160px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-family: Arial, sans-serif;
+      background-image: linear-gradient(to bottom right, rgb(206, 189, 0), rgb(233, 218, 174));
+      border: 2px solid black;
+    }
+
+    .small-box-container {
+      position: absolute;
+      display: flex;
+    }
+
+    .small-box {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 10px;
+      font-family: Arial, sans-serif;
+      border: 1px solid black;
+    }
+
+    .box1 .small-box-container {
+      top: 0;
+      left: 0;
+    }
+
+    .box2 .small-box-container {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .box3 .small-box-container {
+      top: 0;
+      right: 0;
+    }
+
+    .box1 .small-box {
+      background-image: linear-gradient(to bottom right, blue, cyan);
+    }
+
+    .box2 .small-box {
+      background-image: linear-gradient(to bottom right, orange, yellow);
+    }
+
+    .box3 .small-box {
+      background-image: linear-gradient(to bottom right, red, orange);
+    }
+
+    .box4 .small-box-container {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      gap: 5px;
+    }
+
+    .box4 .small-box {
+      background-image: linear-gradient(to bottom right, green, lime);
+    }
+
+    .box5 .small-box-container {
+      top: 0;
+      left: 0;
+      right: 0;
+      justify-content: space-between;
+    }
+
+    .box5 .small-box {
+      background-image: linear-gradient(to bottom right, pink, purple);
+    }
+
+    .box6 .small-box-container {
+      top: 0;
+      left: 0;
+      right: 0;
+      justify-content: space-between;
+    }
+
+    .box6 .small-box {
+      background-image: linear-gradient(to bottom right, brown, yellow);
+    }
+
+    .box7 .small-box-container {
+      top: 0;
+      left: 0;
+      flex-direction: row;
+    }
+
+    .box7 .small-box {
+      background-image: linear-gradient(to bottom right, magenta, violet);
+    }
+
+    .box8 .small-box-container {
+      top: 0;
+      right: 0;
+      flex-direction: column;
+    }
+
+    .box8 .small-box {
+      background-image: linear-gradient(to bottom right, navy, lightblue);
+    }
+
+    .box9 .small-box-container {
+      top: 0;
+      left: 0;
+      flex-direction: column;
+    }
+
+    .box9 .small-box {
+      background-image: linear-gradient(to bottom right, darkred, orange);
+    }
+
+    .box10 .small-box-container {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      flex-direction: row;
+    }
+
+    .box11 .small-box-container {
+      bottom: 0;
+      left: 0;
+      flex-direction: row;
+    }
+
+    .box12 .small-box-container {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      flex-direction: row;
+    }
+
+    .box13 .small-box-container {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      flex-direction: row;
+    }
+
+    .box10 .small-box {
+      background-image: linear-gradient(to bottom right, blue, cyan);
+    }
+
+    .box11 .small-box {
+      background-image: linear-gradient(to bottom right, orange, yellow);
+    }
+
+    .box12 .small-box {
+      background-image: linear-gradient(to bottom right, red, orange);
+    }
+
+    .box13 .small-box {
+      background-image: linear-gradient(to bottom right, green, lime);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box box1">
+      <div class="small-box-container">
+        <div class="small-box">1.1</div>
+        <div class="small-box">1.2</div>
+        <div class="small-box">1.3</div>
+      </div>
+    </div>
+    <div class="box box2">
+      <div class="small-box-container">
+        <div class="small-box">2.1</div>
+        <div class="small-box">2.2</div>
+        <div class="small-box">2.3</div>
+      </div>
+    </div>
+    <div class="box box3">
+      <div class="small-box-container">
+        <div class="small-box">3.1</div>
+        <div class="small-box">3.2</div>
+        <div class="small-box">3.3</div>
+      </div>
+    </div>
+    <div class="box box4">
+      <div class="small-box-container">
+        <div class="small-box">4.1</div>
+        <div class="small-box">4.2</div>
+        <div class="small-box">4.3</div>
+      </div>
+    </div>
+    <div class="box box5">
+      <div class="small-box-container">
+        <div class="small-box">5.1</div>
+        <div class="small-box">5.2</div>
+        <div class="small-box">5.3</div>
+      </div>
+    </div>
+    <div class="box box6">
+      <div class="small-box-container">
+        <div class="small-box">6.1</div>
+        <div class="small-box">6.2</div>
+        <div class="small-box">6.3</div>
+      </div>
+    </div>
+    <div class="box box7">
+      <div class="small-box-container">
+        <div class="small-box">7.1</div>
+        <div class="small-box">7.2</div>
+        <div class="small-box">7.3</div>
+      </div>
+    </div>
+    <div class="box box8">
+      <div class="small-box-container">
+        <div class="small-box">8.1</div>
+        <div class="small-box">8.2</div>
+        <div class="small-box">8.3</div>
+      </div>
+    </div>
+    <div class="box box9">
+      <div class="small-box-container">
+        <div class="small-box">9.1</div>
+        <div class="small-box">9.2</div>
+        <div class="small-box">9.3</div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="box box10">
+      <div class="small-box-container">
+        <div class="small-box">10.1</div>
+        <div class="small-box">10.2</div>
+        <div class="small-box">10.3</div>
+      </div>
+    </div>
+    <div class="box box11">
+      <div class="small-box-container">
+        <div class="small-box">11.1</div>
+        <div class="small-box">11.2</div>
+        <div class="small-box">11.3</div>
+      </div>
+    </div>
+    <div class="box box12">
+      <div class="small-box-container">
+        <div class="small-box">12.1</div>
+        <div class="small-box">12.2</div>
+        <div class="small-box">12.3</div>
+      </div>
+    </div>
+    <div class="box box13">
+      <div class="small-box-container">
+        <div class="small-box">13.1</div>
+        <div class="small-box">13.2</div>
+        <div class="small-box">13.3</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
